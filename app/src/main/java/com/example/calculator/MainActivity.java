@@ -15,60 +15,57 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-       EditText num1=findViewById(R.id.num1);
-       EditText num2=findViewById(R.id.num2);
+        EditText num1 = findViewById(R.id.num1);
+        EditText num2 = findViewById(R.id.num2);
+        Button add = findViewById(R.id.add);
+        Button sum = findViewById(R.id.sum);
+        Button mul = findViewById(R.id.mul);
+        Button div = findViewById(R.id.div);
+        TextView rez = findViewById(R.id.rez);
 
-       Button add=findViewById(R.id.add);
-        Button sum=findViewById(R.id.sum);
-        Button mul=findViewById(R.id.mul);
-
-        Button div=findViewById(R.id.div);
-
-        TextView rez=findViewById(R.id.rez);
-
-        add.setOnClickListener(new View.OnClickListener() {
+        add.setOnClickListener(new View.OnClickListener () {
             @Override
             public void onClick(View view) {
-                double _num1,_num2;
-                _num1=Double.parseDouble(num1.getText().toString().trim());
-                _num2=Double.parseDouble(num2.getText().toString().trim());
-               String _rez=String.valueOf(_num1+_num2);
-               rez.setText(_rez);
+                double _num1, _num2;
+                _num1 = Double.parseDouble(num1.getText().toString().trim());
+                _num2 = Double.parseDouble(num2.getText().toString().trim());
+                String _rez = String.valueOf(_num1 + _num2);
+                rez.setText(_rez);
             }
         });
-       sum.setOnClickListener(new View.OnClickListener() {
+        sum.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                double _num1,_num2;
-                _num1=Double.parseDouble(num1.getText().toString().trim());
-                _num2=Double.parseDouble(num2.getText().toString().trim());
-                String _rez=String.valueOf(_num1-_num2);
+                double _num1, _num2;
+                _num1 = Double.parseDouble(num1.getText().toString().trim());
+                _num2 = Double.parseDouble(num2.getText().toString().trim());
+                String _rez = String.valueOf(_num1 - _num2);
                 rez.setText(_rez);
             }
         });
         mul.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                double _num1,_num2;
-                _num1=Double.parseDouble(num1.getText().toString().trim());
-                _num2=Double.parseDouble(num2.getText().toString().trim());
-                String _rez=String.valueOf(_num1*_num2);
+                double _num1, _num2;
+                _num1 = Double.parseDouble(num1.getText().toString().trim());
+                _num2 = Double.parseDouble(num2.getText().toString().trim());
+                String _rez = String.valueOf(_num1 * _num2);
                 rez.setText(_rez);
+
             }
         });
-       div.setOnClickListener(new View.OnClickListener() {
+        div.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                double _num1,_num2;
-                _num1=Double.parseDouble(num1.getText().toString().trim());
-                _num2=Double.parseDouble(num2.getText().toString().trim());
+                double _num1, _num2;
+                _num1 = Double.parseDouble(num1.getText().toString().trim());
+                _num2 = Double.parseDouble(num2.getText().toString().trim());
 
-                if (_num1 != 0 &&_num2 != 0){
+                if (_num1 != 0 && _num2 != 0) {
                     String _rez = String.valueOf(_num1 / _num2);
                     rez.setText(_rez);
-                }
-                else {
-                    Toast.makeText(MainActivity.this," use count div",Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(MainActivity.this, " use count div", Toast.LENGTH_SHORT).show();
                 }
             }
         });

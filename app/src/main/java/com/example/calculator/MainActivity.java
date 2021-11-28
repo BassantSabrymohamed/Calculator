@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
        Button add=findViewById(R.id.add);
         Button sum=findViewById(R.id.sum);
         Button mul=findViewById(R.id.mul);
+
         Button div=findViewById(R.id.div);
 
         TextView rez=findViewById(R.id.rez);
